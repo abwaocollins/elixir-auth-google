@@ -9,7 +9,7 @@ defmodule ElixirAuthGoogle do
   @default_scope "profile email"
   @default_callback_path "/auth/google/callback"
 
-  @httpoison (Application.compile_env(:elixir_auth_google, :httpoison_mock) || HTTPoison
+  @httpoison Application.compile_env(:elixir_auth_google, :httpoison_mock) || HTTPoison
 
   @type conn :: map
   @type url :: String.t()
